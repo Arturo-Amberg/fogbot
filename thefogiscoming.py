@@ -22,6 +22,13 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+    if message.author.name == "xavi.campos":
+        await message.add_reaction("❤️")
+
+    if message.author.name == "chucho4":
+        for emoji in ["🇸", "🇪", "🇽"]:
+            await message.add_reaction(emoji)
+
     if message.channel.name in CHANNEL_NAMES:
         content_lower = message.content.lower()
         if "the fog is coming" in content_lower:
