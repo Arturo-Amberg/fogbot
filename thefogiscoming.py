@@ -3,7 +3,7 @@ import os
 import re
 
 TOKEN = os.environ.get("DISCORD_TOKEN")
-CHANNEL_NAMES = {"gassy", "meme-review"}
+CHANNEL_NAMES = {"news", "meme-review"}
 FOG_EMOJI = "🌫️"
 
 intents = discord.Intents.default()
