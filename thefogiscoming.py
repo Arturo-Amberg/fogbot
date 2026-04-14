@@ -42,6 +42,8 @@ async def on_message(message):
             await message.reply(file=discord.File("cirno-touhou.gif"))
         elif any(word in content_lower for word in ["feudal", "age", "aoe2"]):
             await message.reply(file=discord.File("wololo.mp3"))
+        elif any(word in content_lower for word in ["somin", "yandrak"]):
+            await message.reply(file=discord.File("tole-cat.gif"))
 
 
 client.run(TOKEN)
