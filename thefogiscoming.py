@@ -23,10 +23,6 @@ async def on_message(message):
 
     if message.channel.name == CHANNEL_NAME:
         content_lower = message.content.lower()
-        if (message.author.name == "jexbus"
-                or any(word in content_lower for word in ["meruane", "jesus"])):
-            await message.reply(file=discord.File("gassy.mp4"))
-            return
         if "the fog is coming" in content_lower:
             await message.channel.send("the fog is coming", tts=True)
         elif "fog" in content_lower:
