@@ -2,7 +2,7 @@ import discord
 import os
 
 TOKEN = os.environ.get("DISCORD_TOKEN")
-CHANNEL_NAME = "news"
+CHANNEL_NAME = "gassy"
 FOG_EMOJI = "🌫️"
 
 intents = discord.Intents.default()
