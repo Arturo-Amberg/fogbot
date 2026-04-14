@@ -38,6 +38,10 @@ async def on_message(message):
             await message.reply("chupalo entonces")
         elif "me gusta" in content_lower:
             await message.reply("el pico")
+        elif any(word in content_lower for word in ["sardina", "jarry"]):
+            await message.reply(file=discord.File("cirno-touhou.gif"))
+        elif any(word in content_lower for word in ["feudal", "age", "aoe2"]):
+            await message.reply(file=discord.File("wololo.mp3"))
 
 
 client.run(TOKEN)
