@@ -22,15 +22,20 @@ async def on_message(message):
         return
 
     if message.channel.name == CHANNEL_NAME:
-        if "fog" in message.content.lower():
+        content_lower = message.content.lower()
+        if "the fog is coming" in content_lower:
+            await message.channel.send("the fog is coming", tts=True)
+        elif "fog" in content_lower:
             await message.reply(FOG_EMOJI * 10)
-        elif "moreno" in message.content.lower():
+        elif "xavi" in content_lower:
+            await message.reply(file=discord.File("reari-dog-barking.gif"))
+        elif "moreno" in content_lower:
             await message.reply(file=discord.File("daleMoreno.mp3"))
-        elif "warhammer" in message.content.lower():
+        elif any(word in content_lower for word in ["war", "warhammer", "hammer"]):
             await message.reply(file=discord.File("starking.webp"))
         elif "11" in message.content:
             await message.reply("chupalo entonces")
-        elif "me gusta" in message.content.lower():
+        elif "me gusta" in content_lower:
             await message.reply("el pico")
 
 
